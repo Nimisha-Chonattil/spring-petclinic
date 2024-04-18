@@ -7,8 +7,10 @@ jobs:
      steps: 
        - name: Build our application
          run: |
+            git clone https://github.com/Nimisha-Chonattil/spring-petclinic.git
+            ls
+            cd spring-petclinic/
             ls
             pwd
-            mvn package -DskipTests=true
 
   
