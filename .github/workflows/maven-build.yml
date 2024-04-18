@@ -10,6 +10,7 @@ jobs:
             git clone https://github.com/Nimisha-Chonattil/spring-petclinic.git
             ls
             cd spring-petclinic/
+             mvn package -DskipTests=true
             ls
             pwd
 
