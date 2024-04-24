@@ -14,7 +14,7 @@ jobs:
       #     java-version: 17
       #     distribution: 'zulu' 
       - name: Upload artifact
-        uses: actions/upload-artifact@2
+        uses: actions/upload-artifact@v2
         with:
           name: petclinic's artifact
           path: target/*.jar
