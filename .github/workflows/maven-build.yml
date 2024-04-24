@@ -36,3 +36,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Nimisha-Chonattil_spring-petclinic
+      - name: Check quality gate status
+        run:
+          curl -s "https://sonarcloud.io/api/qualitygates/project_status?projectKey=<nimisha-chonattil>&branch=main"\
+            -u "${{ secrets.SONAR_TOKEN }}:"\
+            -o status.json
+          jq -r .projectStatus.status status.json
+        
