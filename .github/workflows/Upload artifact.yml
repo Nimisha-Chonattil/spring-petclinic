@@ -13,6 +13,8 @@ jobs:
         with:
           java-version: 17
           distribution: 'zulu' 
+      - name: Build maven
+        run: mvn package 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
