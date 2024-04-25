@@ -5,8 +5,7 @@ name: Java CI with Maven
 
 on: 
   workflow_dispatch: 
-
-run-name: Test without Cache
+run-name: sonar projectkey added
 
 jobs:
   build:
