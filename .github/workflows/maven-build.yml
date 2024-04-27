@@ -55,10 +55,10 @@ jobs:
       #     args: >
       #       -Dsonar.projectKey=Nimisha-Chonattil_spring-petclinic
       #       -Dsonar.orgnization=nimisha-chonattil
-      # - name: Upload Artifact
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: petclinic-artifact
-      #     path: target/*.jar
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: petclinic-artifact
+          path: target/*.jar
           
         
